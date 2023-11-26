@@ -48,8 +48,8 @@ Development files for extending %{name}.
 %{_bindir}/%{name}-run
 %{_mandir}/man1/%{name}*.1*
 # Long live escaping! %%%% resolves to %%; ${v%%.*} strips everything after first dot
-%{_libdir}/lib%{name}.so.%(v=%{soversion}; echo ${v%%%%.*})
-%{_libdir}/lib%{name}.so.%{soversion}
+%{_libdir}/lib%{name}.so.%(v=%{version}; echo ${v%%%%.*})
+%{_libdir}/lib%{name}.so.%{version}
 %dir %{_libdir}/%{name}
 %{_libdir}/%{name}/%{name}-renderer-curses.so
 %{_libdir}/%{name}/%{name}-renderer-wayland.so
