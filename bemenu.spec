@@ -1,21 +1,11 @@
 Name:       bemenu
 Version:    0.6.16
-Release:    %{autorelease}
+Release:    1
 Summary:    Dynamic menu library and client program inspired by dmenu
- 
-# In case upstream do not bump program version when tagging; this should usually just resolve to %%{version}
-%global     soversion   %{version}
- 
-# Library and bindings are LGPLv3+, other files are GPLv3+
 License:    GPLv3+ and LGPLv3+
 URL:        https://github.com/Cloudef/bemenu
-Source0:    %{url}/releases/download/%{version}/%{name}-%{version}.tar.gz
-Source1:    %{url}/releases/download/%{version}/%{name}-%{version}.tar.gz.asc
-Source2:    https://cloudef.pw/bemenu-pgp.txt
+Source0:    https://github.com/Cloudef/bemenu/releases/download/%{version}/bemenu-%{version}.tar.gz
  
-Patch:      respect-env-build-flags.patch
- 
-BuildRequires:  gcc
 BuildRequires:  gnupg2
 BuildRequires:  make
 BuildRequires:  pkgconfig(cairo)
@@ -42,7 +32,6 @@ Requires: %{name}%{?_isa} = %{version}-%{release}
 Development files for extending %{name}.
  
 %prep
-%{gpgverify} --keyring='%{SOURCE2}' --signature='%{SOURCE1}' --data='%{SOURCE0}'
 %autosetup -p1
  
 %build
