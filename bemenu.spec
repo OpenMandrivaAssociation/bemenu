@@ -1,3 +1,5 @@
+%define _disable_ld_no_undefined 1
+
 Name:       bemenu
 Version:    0.6.22
 Release:    1
