@@ -1,3 +1,9 @@
+# Needed only on x86_64 because build fail with:
+# ld.lld: error: undefined symbol: ceil
+# >>> referenced by window.c:192 (lib/renderers/wayland/window.c:192)
+# >>> bemenu-renderer-wayland.so.lto.o:(render_windows_if_pendin
+%define _disable_ld_no_undefined 1
+
 Name:       bemenu
 Version:    0.6.22
 Release:    1
