@@ -5,7 +5,7 @@
 %define _disable_ld_no_undefined 1
 
 Name:       bemenu
-Version:    0.6.22
+Version:    0.6.23
 Release:    1
 Summary:    Dynamic menu library and client program inspired by dmenu
 License:    GPLv3+ and LGPLv3+
